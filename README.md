@@ -1,6 +1,16 @@
-# Java IDE for Neovim 0.7
+# Neovim Development IDE
 
-The config may work but is not guaranteed to work with future versions of Neovim or nvim-jdtls, the plugins are pinned to stable tested versions.
+This config is based on [https://github.com/LunarVim/nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide) plus some other plugins.
+
+## Try out this config
+
+Make sure to remove or move your current nvim directory
+
+IMPORTANT Requires [Neovim v0.8.0]](https://github.com/neovim/neovim/releases). Upgrade if you're on an earlier version.
+
+`git clone https://github.com/daibertdiego/neovim-ide-ready-config ~/.config/nvim`
+
+Run nvim and wait for the plugins to be installed
 
 ## Setup 
 
