@@ -44,6 +44,9 @@ keymap("v", "p", '"_dP', opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
+keymap("v", "jk", "<ESC>", opts)
+keymap("v", "kj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -70,11 +73,37 @@ keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_o
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
-keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
-keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
-keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<leader>r", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F9>", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<F8>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<S-F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
-keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+keymap("n", "<leader>q", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- Disable Arrow Keys
+keymap("", "<Up>", "<Nop>", opts)
+keymap("", "<Down>", "<Nop>", opts)
+keymap("", "<Left>", "<Nop>", opts)
+keymap("", "<Right>", "<Nop>", opts)
+
+keymap("i", "<Up>", "<Nop>", opts)
+keymap("i", "<Down>", "<Nop>", opts)
+keymap("i", "<Left>", "<Nop>", opts)
+keymap("i", "<Right>", "<Nop>", opts)
+
+-- Fast Save Files 
+keymap("", "<leader>s", ":w<CR>", opts)
+
+-- Word motion remap
+--vim.g.wordmotion_prefix = '<leader>'
+vim.g.wordmotion_mappings = {
+    w = "<leader>w",
+    b = "<leader>b",
+    e = "<leader><S-e>",
+    ge = "<leader>ge",
+    aw = "<leader>aw",
+    iw = "<leader>iw"
+}

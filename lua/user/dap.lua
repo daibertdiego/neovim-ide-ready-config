@@ -13,6 +13,13 @@ if not dap_install_status_ok then
   return
 end
 
+local dap_go_status_ok, dap_go = pcall(require, "dap-go")
+if not dap_go_status_ok then
+  return
+end
+
+dap_go.setup {}
+
 dap_install.setup {}
 
 dap_install.config("python", {})
