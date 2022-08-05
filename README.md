@@ -78,8 +78,8 @@ For a better understanding of how this works and to keep updated with the projec
 
 ## Keybindings
 
-- General: [keybindings](https://github.com/LunarVim/nvim-basic-ide/blob/java-ide-0.7/lua/user/keymaps.lua)
+- General: [keybindings](https://github.com/daibertdiego/neovim-ide-ready-config/blob/dev/lua/user/keymaps.lua)
 
-- LSP: [keybindings](https://github.com/LunarVim/nvim-basic-ide/blob/ef5553049148cfd69b3a6119395f05c79a8f8895/lua/user/lsp/handlers.lua#L45)
+- LSP: [keybindings](https://github.com/daibertdiego/neovim-ide-ready-config/blob/dev/lua/user/lsp/handlers.lua#L45)
 
-- Java Specific: [keybindings](https://github.com/LunarVim/nvim-basic-ide/blob/ef5553049148cfd69b3a6119395f05c79a8f8895/ftplugin/java.lua#L192)
+- Java Specific: [keybindings](https://github.com/LunarVim/nvim-basic-ide/blob/dev/ftplugin/java.lua#L192)
